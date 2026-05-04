@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ede9e1;
+  --surface: #f4f1eb;
+  --surface2: #ffffff;
+  --border: #d4cfc5;
+  --accent: #c8922a;
+  --accent-hover: #b07e22;
+  --cta: #5b4fe8;
+  --cta-hover: #4a40d4;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --ink: #1c1c2e;
+  --muted: #6b6b7b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c20;
+    --surface: #25252a;
+    --surface2: #2e2e34;
+    --border: #3a3a42;
+    --ink: #f4f1eb;
+    --muted: #9a9aa8;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-geist-sans), -apple-system, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* shadcn-lite primitives */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-3.5 py-2 text-sm font-medium transition-all border;
+  border-color: var(--border);
+}
+.btn-primary {
+  @apply text-white border-transparent;
+  background: var(--cta);
+}
+.btn-primary:hover {
+  background: var(--cta-hover);
+}
+.btn-ghost {
+  background: var(--surface2);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  background: var(--surface);
+}
+.btn-danger {
+  color: var(--danger);
+}
+.btn-danger:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input,
+.textarea,
+.select {
+  @apply w-full rounded-[10px] px-3 py-2 text-sm transition-all outline-none border;
+  background: var(--surface2);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--cta);
+  box-shadow: 0 0 0 3px rgba(91, 79, 232, 0.12);
+}
+
+.label {
+  @apply text-[11px] uppercase tracking-wider font-semibold;
+  color: var(--muted);
+}
+
+.card {
+  @apply rounded-[14px] p-5 border;
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(28, 28, 46, 0.04);
+}

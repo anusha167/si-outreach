@@ -1,0 +1,24 @@
+# Supabase (project: kargxhcpiyqaqkzxtics)
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# Google Gemini (free, https://aistudio.google.com/app/apikey)
+GEMINI_API_KEY=
+
+# Brevo SMTP (https://app.brevo.com/settings/keys/api)
+BREVO_API_KEY=
+SENDER_EMAIL=
+
+# Branding
+CLUB_NAME=Startup Incubator at UCSD
+CLUB_WEBSITE=https://startupincubatorsd.com
+
+# Default admin user (created by `pnpm seed`)
+DEFAULT_EMAIL=admin@siucsd.com
+DEFAULT_PASSWORD=siucsd2026
+DEFAULT_NAME=Admin
+DEFAULT_ROLE=President
+
+# AI toggle
+USE_AI=true
